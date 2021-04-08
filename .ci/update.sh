@@ -2,8 +2,17 @@
 # Lazy man script
 # Author: QiangZiBro
 #---------------------------------------------------------------------------------
+SERVERS="l0 l1 l2 l3 l4 l5"
+
+
+
 CLEAR='\033[0m'
 RED='\033[0;31m'
+update_remote_dotfiles(){
+	echo remote:$1, $2
+	ssh -o ConnectTimeout=3 "$1" "/bin/bash /home/qiangzibro/.Qdotfiles/.ci/update.sh pull \
+		-t \"$2\" "
+}
 
 function usage() {
   if [ -n "$1" ]; then
@@ -46,7 +55,7 @@ while [[ "$#" > 0 ]]; do case $1 in
   *) usage "Unknown parameter passed: $1"; shift; shift;;
 esac; done
 
-# verify paams
+# verify params
 if [ -n "$HELP" ];then usage "Qdotfiles updater"; fi
 if [ -z "$MESSAGE" ]; then MESSAGE='update from ci';fi
 if [ -z "$DESTINATION" ]; then DESTINATION='master';fi
@@ -79,10 +88,10 @@ github_update(){
 		git pull origin $DESTINATION
 		/bin/bash ~/.Qdotfiles/scripts/bootstrap.sh
 		if [ -n "$PULL_ALL" ];then
-			ssh -o ConnectTimeout=3 l1 "/bin/bash /home/qiangzibro/.Qdotfiles/.ci/update.sh pull \
-				-t \"$DESTINATION\" "
-            ssh -o ConnectTimeout=3 l2 "/bin/bash /home/qiangzibro/.Qdotfiles/.ci/update.sh pull \
-				-t \"$DESTINATION\" "
+			for server in $SERVERS
+			do
+				update_remote_dotfiles	"${server}" "${DESTINATION}"
+			done
 			wait
         fi
     fi

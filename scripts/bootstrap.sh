@@ -60,10 +60,10 @@ pre_set(){
     unameOut="$(uname -s)"
     case "${unameOut}" in
         Linux*)
-			if [ ! -d /usr/softwares ];then
-				echo INFO:Creating directory in /usr/softwares/, may need sudo priviledge
-				sudo mkdir -p /usr/softwares/
-				sudo chmod 777 -R /usr/softwares/
+			if [ ! -d /usr/local/softwares/ ];then
+				echo INFO:Creating directory in /usr/local/softwares/, may need sudo priviledge
+				sudo mkdir -p /usr/local/softwares/
+				sudo chmod 777 -R /usr/local/softwares/
 			fi
             ;;
         Darwin*)
