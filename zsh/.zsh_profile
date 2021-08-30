@@ -1,9 +1,41 @@
 #!/bin/bash
+qtool(){
+  if [ "$1" = "ip" ];then
+    ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | grep -Ev '172.*.0.1'
+  elif [ "$1" = "hs" ];then
+	shift
+	hserver $@
+  else
+    echo "Usage:"
+    echo "  qtool [ip|ps]"
+  fi
+}
+hserver(){
+	port=${1-8080}
+	ip=`qtool ip`
+	python -m http.server $port --bind ${ip}
+}
+caps()
+{
+	cmd=${1:-'ls'}
+	machines=${2:-'l0 l1 l4 l5'}
+	pssh -i -H "$machines" "cd ~/caps3d && $cmd"
+}
+
+capsup()
+{
+	m=${1:-'l0'}
+	o=${2:-'origin'}
+	b=${3:-'dev'}
+	caps "git push ${o} ${b}" $m && caps "git pull ${o} ${b}"
+}
+
 qdot(){
-	/bin/bash ~/.Qdotfiles/.ci/update.sh "$@"
+	~/.Qdotfiles/scripts/qdot "$@"
 }
 common_aliases () {
     alias ei="nvim ~/.Qdotfiles/scripts/init.sh"
+	alias q="qdot"
     alias fm="ranger"
     alias sb="source ~/.zshrc"
     alias eb="nvim ~/.zshrc"
@@ -11,9 +43,6 @@ common_aliases () {
     alias cq="cd ~/.Qdotfiles/"
 	alias cr="cd ~/.config/ranger/"
     alias unproxy='http_proxy="" https_proxy=""'
-	alias qupdate="/bin/bash ~/.Qdotfiles/.ci/update.sh update"
-	alias qpull="/bin/bash ~/.Qdotfiles/.ci/update.sh pull"
-	alias qpush="/bin/bash ~/.Qdotfiles/.ci/update.sh push"
 }
 mac_aliases () {
     alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
