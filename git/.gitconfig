@@ -12,7 +12,6 @@
 	sslVerify = false
 
 [https]
-	proxy = 
 	sslVerify = false
 	lowSpeedLimit = 0
 	lowSpeedTime = 999999
