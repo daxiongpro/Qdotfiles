@@ -8,6 +8,7 @@ source ~/.Qdotfiles/.env
 CLEAR='\033[0m'
 RED='\033[0;31m'
 update_remote_dotfiles() {
+  # 更改6台linux服务器
   echo remote:$1, $2
   ssh -o ConnectTimeout=3 "$1" "/bin/bash /home/qiangzibro/.Qdotfiles/scripts/qdot pull \
 		-t \"$2\" "
@@ -119,7 +120,7 @@ while [[ "$#" > 0 ]]; do case $1 in
 # verify params
 if [ -n "$HELP" ]; then usage "Qdotfiles updater"; fi
 if [ -z "$MESSAGE" ]; then MESSAGE='update from qdot push'; fi
-if [ -z "$DESTINATION" ]; then DESTINATION='main'; fi
+if [ -z "$DESTINATION" ]; then DESTINATION='master'; fi
 
 verbose_info() {
   # 如果有网络问题使用这个
