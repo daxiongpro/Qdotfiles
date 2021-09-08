@@ -30,7 +30,7 @@ greeting() {
   printf "$GREEN"
   cat <<-'EOF'
  __________________________________
-/          QiangZiBro              \
+/          daxiongpro               \
 | Hello, Welcome to use Qdotfiles!  |
 | Useful tools:                     |
 |   qdot -h                         | 
