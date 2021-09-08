@@ -1,26 +1,29 @@
 <p align="center">
-  <h3 align="center">QiangZiBro的dotfiles</h3>
+  <h3 align="center">daxiongproのdotfiles</h3>
   <p align="center">
-   Development tools and dotfiles of QiangZiBro, supporting mac and ubuntu in the same time.
+   Development tools and dotfiles of daxiongpro, supporting mac and ubuntu in the same time.
   </br>
     <a href="README_zh.md">ZH</a>|<a href="README.md">EN</a>
   </p>
 </p>
 
+
 Wanna have a try? Just copy this command to your terminal, Qdotfiles will be installed and setup on your mac or linux.
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/QiangZiBro/Qdotfiles/main/scripts/bootstrap.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/daxiongpro/Qdotfiles/master/scripts/bootstrap.sh)"
 ```
+
+**Note: This command may uses proxy.** 
 
 
 
 ## Getting started
 
-Fork this repo, change name `QiangZiBro` to `your_github_username`  in below command
+Fork this repo, change name `daxiongpro` to `{{ your_github_username }}`  in below command
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/your_github_username/Qdotfiles/main/scripts/bootstrap.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/{{ your_github_username }}/Qdotfiles/master/scripts/bootstrap.sh)"
 ```
 
 Make changes, and commit to your repository
@@ -150,6 +153,8 @@ q [push|pull] [-m message -t <refspec>]
     
 
 ## Acknowledgement
+
+QiangZiBro/[Qdotfiles](https://github.com/QiangZiBro/Qdotfiles)
 
 [holman](https://github.com/holman)/**[dotfiles](https://github.com/holman/dotfiles)**
 

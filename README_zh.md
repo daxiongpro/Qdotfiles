@@ -35,13 +35,13 @@
 ### 1 立即从一台unix机器上设置Qdotfiles
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/QiangZiBro/Qdotfiles/master/scripts/bootstrap.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/daxiongpro/Qdotfiles/master/scripts/bootstrap.sh)"
 ```
 
 ### 2 仅克隆项目
 
 ```bash
-git clone https://github.com/QiangZiBro/Qdotfiles ~/.Qdotfiles && cd ~/.Qdotfiles
+git clone https://github.com/daxiongpro/Qdotfiles ~/.Qdotfiles && cd ~/.Qdotfiles
 ```
 
 ### 3 配置命令行代理
