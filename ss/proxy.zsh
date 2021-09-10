@@ -23,6 +23,7 @@ cat << EOF
 Usage: proxy [on|off|up|down|status|restart|cmd|set|which|test]
 Command:
  - on/off: set http/https proxy port
+ - on clash: set http proxy to my windows clash
  - up/down/restart: set docker based service of command line proxy
  - set: select one from all ss configurations which are in ~/.Qdotfiles/ss/export.json
 EOF
@@ -30,6 +31,7 @@ EOF
 function proxy(){
 	MAC_PROXY_PORT=1087
 	LINUX_PROXY_PORT=8999
+	PROXY_IP=127.0.0.1
 	if test "$(uname)" = "Darwin";then
 		PROXY_PORT=$MAC_PROXY_PORT
 	elif test "$(expr substr $(uname -s) 1 5)" = "Linux";then
@@ -42,6 +44,9 @@ function proxy(){
 			PROXY_PORT=$MAC_PROXY_PORT ;;
 		l*|linux)
 			PROXY_PORT=$LINUX_PROXY_PORT ;;
+		clash)
+			PROXY_IP=10.22.148.80 
+			PROXY_PORT=7890 ;;
 		-h|--help)
 			echo "proxy on [OPTIONS]"
 			echo "Usage: set http/https proxy port"
@@ -56,12 +61,12 @@ function proxy(){
 			PROXY_PORT=${2:-${PROXY_PORT}}
 			;;
 		esac
-		export http_proxy="127.0.0.1:$PROXY_PORT"
-		export https_proxy="127.0.0.1:$PROXY_PORT"
+		export http_proxy="$PROXY_IP:$PROXY_PORT"
+		export https_proxy="$PROXY_IP:$PROXY_PORT"
 		# docker pull proxy needs this
 		# https://docs.docker.com/config/daemon/systemd/#httphttps-proxy
-		export HTTP_PROXY="127.0.0.1:$PROXY_PORT"
-		export HTTPS_PROXY="127.0.0.1:$PROXY_PORT"
+		export HTTP_PROXY="$PROXY_IP:$PROXY_PORT"
+		export HTTPS_PROXY="$PROXY_IP:$PROXY_PORT"
 	elif [ "$1" = "off" ]; then
 		export http_proxy=""
 		export https_proxy=""
