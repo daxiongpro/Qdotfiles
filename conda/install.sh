@@ -18,6 +18,10 @@ if test "$(uname)" = "Darwin"; then
 
 elif test "$(expr substr $(uname -s) 1 5)" = "Linux"; then
   conda_linux=~/.Qdotfiles/downloads/miniconda3_linux.sh
+  download_dir=~/.Qdotfiles/downloads
+  if [ ! -d $download_dir ]; then
+	  mkdir $download_dir
+  fi
   # linux installation branch
   if [ ! -f $conda_linux ]; then
     wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O $conda_linux
