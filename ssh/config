@@ -1,0 +1,32 @@
+Host l0
+	HostName 10.22.148.86
+	User caizhengyi
+	Port 6100
+
+Host l1
+	HostName 10.22.148.86
+	User caizhengyi
+	Port 6101
+Host l2
+	HostName 10.22.148.86
+	User caizhengyi
+	Port 22
+Host l3
+	HostName 10.22.148.86
+	User caizhengyi
+	Port 6103
+Host l4
+	HostName 10.22.148.86
+	User caizhengyi
+	Port 6104
+Host l5
+	HostName 10.22.148.86
+	User caizhengyi
+	Port 6105
+
+Host geely
+	HostName 192.168.4.26
+	User cai
+	Port 22
+
+
