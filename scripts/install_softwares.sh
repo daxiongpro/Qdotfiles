@@ -5,6 +5,17 @@
 # Args:
 # -q : keep silent
 
+change_apt_sources_and_update(){
+	sources_dir = "/etc/apt/sources.list.back"
+	if [ ! -f $sources_dir ]; then
+		sudo mv /etc/apt/sources.list /etc/apt/sources.list.back
+		sudo cp ~/.Qdotfiles/apt/sources.list /etc/apt/sources.list
+	fi
+	sudo apt update
+}
+
+change_apt_sources_and_update
+
 cd "$(dirname $0)"/..
 
 #if test "$(expr substr $(uname -s) 1 5)" = "Linux"
