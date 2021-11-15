@@ -23,7 +23,7 @@ cat << EOF
 Usage: proxy [on|off|up|down|status|restart|cmd|set|which|test]
 Command:
  - on/off: set http/https proxy port
- - on clash: set http proxy to my windows clash
+ - on nbu/geely/wsl: set http proxy to my nbu/geely/wsl windows clash
  - up/down/restart: set docker based service of command line proxy
  - set: select one from all ss configurations which are in ~/.Qdotfiles/ss/export.json
 EOF
@@ -44,11 +44,14 @@ function proxy(){
 			PROXY_PORT=$MAC_PROXY_PORT ;;
 		l*|linux)
 			PROXY_PORT=$LINUX_PROXY_PORT ;;
-		clash)
+		nbu)
 			PROXY_IP=10.22.148.80 
 			PROXY_PORT=7890 ;;
 		geely)
 			PROXY_IP=192.168.4.148
+			PROXY_PORT=7890 ;;
+		wsl)
+			PROXY_IP=127.0.0.1
 			PROXY_PORT=7890 ;;
 		-h|--help)
 			echo "proxy on [OPTIONS]"
