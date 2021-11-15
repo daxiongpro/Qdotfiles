@@ -41,7 +41,7 @@ Usage 1: add + commit + push
 
 Usage 2: push to specified destination
    qdot push -t "HEAD"
-   qdot push -t "main"
+   qdot push -t "master"
    qdot push -t "dev:dev"
 
 Usage 3: update from github (for all remote servers[-r]) and setup

@@ -30,7 +30,7 @@ Make changes, and commit to your repository
 
 ```
 qdot backup 
-qdot push -m "changes" -t [main|dev|HEAD]
+qdot push -m "changes" -t [master`|dev|HEAD]
 ```
 
 Proxy utilities in Qdotfiles
