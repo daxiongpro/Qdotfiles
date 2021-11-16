@@ -122,7 +122,9 @@ setup_config() {
 main() {
   greeting
   pre_set
+  # 判断~/.Qdotfiles文件是否存在
   check_project
+  # 把一些软件的配置文件放到home~目录下
   setup_config
   exec zsh
 }
