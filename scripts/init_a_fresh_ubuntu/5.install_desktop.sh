@@ -52,6 +52,7 @@ sudo systemctl start xrdp
 sudo systemctl status xrdp
 sudo chmod 666 /etc/xrdp/xrdp.ini
 sudo echo "exec startxfce4" >> /etc/xrdp/xrdp.ini
+echo xfce4-session > ~/.xsession
 sudo systemctl restart xrdp
 # 配置防火墙
 sudo ufw allow 3389
