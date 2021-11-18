@@ -29,7 +29,7 @@ QDOTFILES="~/.Qdotfiles"
 source ~/.Qdotfiles/ss/proxy.zsh
 
 # zsh
-source ~/.Qdotfiles/zsh/theme.zsh
+# source ~/.Qdotfiles/zsh/theme.zsh
 source_if_exists ~/.zsh_profile
 
 # zlua
