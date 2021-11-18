@@ -18,8 +18,17 @@ EOF
 }
 
 install_basic_softwares() {
-  sudo apt-get install -y g++ freeglut3-dev build-essential \
+  sudo apt-get install -y gcc-7 g++-7 freeglut3-dev build-essential \
     libx11-dev libxmu-dev libxi-dev libglu1-mesa libglu1-mesa-dev
+
+  if [ -f /usr/bin/gcc ]; then
+	  sudo rm /usr/bin/gcc
+  fi
+  if [ -f /usr/bin/g++ ]; then
+	  sudo rm /usr/bin/g++
+  fi
+  sudo ln -s /usr/bin/gcc-7 /usr/bin/gcc
+  sudo ln -s /usr/bin/g++-7 /usr/bin/g++
 }
 
 if [ ! "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
