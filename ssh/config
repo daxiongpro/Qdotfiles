@@ -29,4 +29,8 @@ Host geely
 	User cai
 	Port 22
 
-
+Host geely2
+	HostName 10.186.176.198
+	User zhengyi.cai
+	Port 22
+	
