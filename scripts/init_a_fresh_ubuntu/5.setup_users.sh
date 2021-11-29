@@ -2,8 +2,8 @@
 # 为实验室写的用户创建脚本，请创建用户后改密码
 #
 # 请在这里添加要创建的用户
-_arg_user="daxiongpro chenhao"
-_arg_admin="qiangzibro chenkangxin"
+_arg_user="caizhengyi chenhao"
+_arg_admin="qiangzibro daxiongpro"
 
 die() {
   local _ret="${2:-1}"
