@@ -1,3 +1,5 @@
+# 将本地的“点文件”复制到.Qdotfiles项目中
+
 #!/bin/bash
 
 cd "$(dirname $0)"/..

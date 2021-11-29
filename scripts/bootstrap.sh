@@ -1,3 +1,7 @@
+# 判断.Qdotfiles仓库是否存在
+# 拷贝.zshrc等“点文件”到家目录
+
+
 #!/bin/bash
 set -e
 if [ $(whoami) = "root" ]; then
