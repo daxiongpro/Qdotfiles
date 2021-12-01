@@ -21,7 +21,7 @@
 
 [core]
   editor = nvim
-  pager = diff-so-fancy | less --tabs=4 -RFX
+	pager = diff-so-fancy | less --tabs=4 -RFX
 
 [push]
   default = current
@@ -31,7 +31,7 @@
 
 
 [color]
-  ui = true
+	ui = true
 
 [github]
 	user = QiangZiBro
@@ -55,3 +55,15 @@
 [user]
 	name = daxiongpro
 	email = 910660298@qq.com
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse

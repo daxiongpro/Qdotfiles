@@ -56,6 +56,9 @@ source ~/.Qdotfiles/tmux/tmux.zsh
 # nvm
 # source ~/.Qdotfiles/nvm/nvm.zsh
 
+# ros2
+source /opt/ros/foxy/setup.zsh
+
 # 整理 PATH，删除重复路径
 if [ -n "$PATH" ]; then
   old_PATH=$PATH:

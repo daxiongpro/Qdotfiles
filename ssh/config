@@ -24,18 +24,12 @@ Host l5
 	User caizhengyi
 	Port 6105
 
-Host junjiepc
+Host geely
 	HostName 192.168.4.26
-	User daxiongpro
+	User cai
 	Port 22
 
-Host junjiepc2
-	HostName 172.23.130.83
-	User daxiongpro
-	Port 22
-
-
-Host geely8gpu
+Host geely2
 	HostName 10.186.176.198
 	User zhengyi.cai
 	Port 22
