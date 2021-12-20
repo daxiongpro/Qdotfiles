@@ -1,8 +1,0 @@
-FROM shadowsocks/shadowsocks-libev
-USER root
-RUN set -ex && \
-	apk --update add --no-cache \
-		curl \
-		privoxy
-WORKDIR /root/.Qdotfiles
-CMD privoxy privoxy/config && ss-local -b 0.0.0.0 -u --fast-open -c /root/.Qdotfiles/ss/ss.json
