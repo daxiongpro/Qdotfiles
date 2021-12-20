@@ -31,7 +31,7 @@ QDOTFILES="~/.Qdotfiles"
 source ~/.Qdotfiles/ss/proxy.zsh
 
 # zsh
-source_if_exists ~/.Qdotfiles/.zsh_profile
+source_if_exists ~/.Qdotfiles/zsh/.zsh_profile
 
 # conda
 source ~/.Qdotfiles/conda/conda.zsh
