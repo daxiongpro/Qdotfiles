@@ -44,15 +44,15 @@ function proxy(){
 			PROXY_PORT=$MAC_PROXY_PORT ;;
 		l*|linux)
 			PROXY_PORT=$LINUX_PROXY_PORT ;;
-		nbu)
-			PROXY_IP=10.22.148.80 
-			PROXY_PORT=7890 ;;
-		geely)
-			PROXY_IP=192.168.4.148
-			PROXY_PORT=7890 ;;
-		wsl)
-			PROXY_IP=127.0.0.1
-			PROXY_PORT=7890 ;;
+		# nbu)
+		# 	PROXY_IP=10.22.148.80 
+		# 	PROXY_PORT=7890 ;;
+		# geely)
+		# 	PROXY_IP=192.168.4.148
+		# 	PROXY_PORT=7890 ;;
+		# wsl)
+		# 	PROXY_IP=127.0.0.1
+		# 	PROXY_PORT=7890 ;;
 		-h|--help)
 			echo "proxy on [OPTIONS]"
 			echo "Usage: set http/https proxy port"
