@@ -3,10 +3,11 @@
   <p align="center">
    Development tools and dotfiles of daxiongpro, supporting mac and ubuntu in the same time.
   </br>
-    <a href="README_zh.md">ZH</a>|<a href="README.md">EN</a>
+    <!-- a href="README_zh.md">ZH</a>|<a href="README.md">EN</a -->
   </p>
 </p>
-## Presets:
+
+## Presets：proxy
 
 Make a proxy on 8999 port in your linux computer. I recommand use clash.
 
@@ -22,7 +23,7 @@ Make a proxy on 8999 port in your linux computer. I recommand use clash.
 sh scripts/init_a_fresh_ubuntu/{{ 1-10 }}.sh # install softwares
 ```
 
-###### Secondly, you should run following command 
+###### Secondly, you should run following command
 
 ```bash
 sh scripts/bootstrap.sh # copy "dotfiles" to your home dir "~"
@@ -36,9 +37,11 @@ source ~/.zshrc
 
 ###### Now, you can just use Qdotfiles!!!
 
-------
+---
 
-Make changes, and commit to your repository
+
+
+### Make changes, and commit to your repository
 
 ```bash
 qdot backup # copy your dotfiles to the Reponsitory
@@ -48,25 +51,7 @@ qdot push -m "changes" -t [master`|dev|HEAD]
 Proxy utilities in Qdotfiles
 
 ```bash
-proxy [on|off|up|down|status|restart|cmd|set|which|test]
-```
-
-
-
-## Feature
-
-### Synchronizing support for multi-servers
-
-You can synchronize multiple servers by including ssh configuration in`.env` 
-
-```
-SERVERS="l0 l1 l2 l3 l4 l5 l6"
-```
-
-then you can manage multiple servers based on this file, e.g., update Qdotfiles of all servers from github:
-
-```bash
-qdot pull -r
+proxy [on|off|status]
 ```
 
 Each software owns a directory in root directory of the project, `install.sh` and `*.zsh` represent installation and software-wise comands.
@@ -85,15 +70,12 @@ or use  `push`  or  `pull`  to remote git server
 q [push|pull] [-m message -t <refspec>]
 ```
 
-
-
 ## Acknowledgement
 
 QiangZiBro/[Qdotfiles](https://github.com/QiangZiBro/Qdotfiles)
 
 [holman](https://github.com/holman)/**[dotfiles](https://github.com/holman/dotfiles)**
 
- [mathiasbynens](https://github.com/mathiasbynens)/**[dotfiles](https://github.com/mathiasbynens/dotfiles)**
+[mathiasbynens](https://github.com/mathiasbynens)/**[dotfiles](https://github.com/mathiasbynens/dotfiles)**
 
- [Speed Up Oh-My-Zsh](https://bennycwong.github.io/post/speeding-up-oh-my-zsh/)
-
+[Speed Up Oh-My-Zsh](https://bennycwong.github.io/post/speeding-up-oh-my-zsh/)
