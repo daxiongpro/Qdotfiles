@@ -23,6 +23,8 @@ source_if_exists() {
   fi
 }
 
+
+export PATH=$PATH:~/.Qdotfiles/bin
 QDOTFILES="~/.Qdotfiles"
 
 # ss
@@ -30,7 +32,7 @@ source ~/.Qdotfiles/ss/proxy.zsh
 
 # zsh
 # source ~/.Qdotfiles/zsh/theme.zsh
-source_if_exists ~/.zsh_profile
+source_if_exists ~/.Qdotfiles/.zsh_profile
 
 # zlua
 source ~/.Qdotfiles/zlua/zlua.zsh

@@ -30,9 +30,7 @@ capsup()
 	caps "git push ${o} ${b}" $m && caps "git pull ${o} ${b}"
 }
 
-qdot(){
-	~/.Qdotfiles/scripts/qdot "$@"
-}
+
 common_aliases () {
     alias ei="nvim ~/.Qdotfiles/scripts/init.sh"
 	alias q="qdot"
