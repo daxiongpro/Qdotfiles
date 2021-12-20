@@ -18,7 +18,7 @@ jobs:
           # 注意替换为你的 GitHub 源仓库地址
           source-repo: git@github.com:daxiongpro/Qdotfiles.git
           # 注意替换为你的 Gitee 目标仓库地址
-          destination-repo: git@gitee.com:myNameIsRex/Qdotfiles.git
+          destination-repo: git@gitee.com:daxiongpro/Qdotfiles.git
 
       - name: Build Gitee Pages
         uses: yanglbme/gitee-pages-action@main
