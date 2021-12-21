@@ -15,7 +15,15 @@ see [clash tutorial](docs/clash.md)
 
 ## Getting started
 
-###### Now, you can just use Qdotfiles!!!
+```bash
+git clone git@gitee.com:daxiongpro/Qdotfiles.git .Qdotfiles
+
+cd .Qdotfiles/scripts
+
+bash bootstrap.sh
+```
+
+Now, you can just use Qdotfiles!!!
 
 ---
 
@@ -26,11 +34,16 @@ qdot backup # copy your dotfiles to the Reponsitory
 qdot push -m "changes" -t [master`|dev|HEAD]
 ```
 
+
+
+
+## Presets：proxy
+
+Make a proxy on 8999 port in your linux computer. I recommand use clash. see [clash tutorial](docs/clash.md)
+
 Proxy utilities in Qdotfiles
 
-```bash
-proxy [on|off|status]
-```
+`proxy [on|off|status]`
 
 Each software owns a directory in root directory of the project, `install.sh` and `*.zsh` represent installation and software-wise comands.
 
