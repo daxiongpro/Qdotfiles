@@ -22,4 +22,6 @@ http://clash.razord.top/#/proxies
 
 ### References：
 
-[clash-linux](https://www.cnblogs.com/rogunt/p/15127947.html "how to use clash on linux")
+[clash download](https://github.com/Dreamacro/clash/releases)
+
+[clash usage](https://www.cnblogs.com/rogunt/p/15127947.html)

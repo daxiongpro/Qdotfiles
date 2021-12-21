@@ -1,44 +1,33 @@
 <p align="center">
   <h3 align="center">daxiongproのdotfiles</h3>
   <p align="center">
-   Development tools and dotfiles of daxiongpro, supporting mac and ubuntu in the same time.
+   This Repo is to help you use ubuntu more easy!
   </br>
-    <!-- a href="README_zh.md">ZH</a>|<a href="README.md">EN</a -->
-  </p>
-</p>
 
-## Presets：proxy
 
-Make a proxy on 8999 port in your linux computer. I recommand use clash.
-
-[clash download](https://github.com/Dreamacro/clash/releases)
-
-[clash usage](https://www.cnblogs.com/rogunt/p/15127947.html)
-
-## Getting started
-
-###### At first, you should make sure you have installed ssh, zsh, vim, etc. You can run following scripts directly.
+### Getting started
 
 ```bash
-sh scripts/init_a_fresh_ubuntu/{{ 1-10 }}.sh # install softwares
+git clone git@gitee.com:daxiongpro/qdotfiles.git ~/.Qdotfiles
+cd .Qdotfiles/scripts
+bash ./bootstrap.sh
 ```
 
-###### Secondly, you should run following command
-
-```bash
-sh scripts/bootstrap.sh # copy "dotfiles" to your home dir "~"
-```
-
-###### Third, you should source .zshrc
-
-```bash
-source ~/.zshrc
-```
-
-###### Now, you can just use Qdotfiles!!!
+Now, you can just use Qdotfiles!!!
 
 ---
 
+### Init a fresh ubuntu
+
+Help you make all kinds of configrations. See [Init fresh ubuntu tutorials](docs/init_fresh_ubuntu.md)
+
+### proxy
+
+Make a proxy on 8999 port in your linux computer. I recommand use clash. See [clash tutorial](docs/clash.md)
+
+* Proxy utilities in Qdotfiles
+
+  `proxy [on|off|status]`
 
 
 ### Make changes, and commit to your repository
@@ -48,11 +37,7 @@ qdot backup # copy your dotfiles to the Reponsitory
 qdot push -m "changes" -t [master`|dev|HEAD]
 ```
 
-Proxy utilities in Qdotfiles
-
-```bash
-proxy [on|off|status]
-```
+```### Repo Structure
 
 Each software owns a directory in root directory of the project, `install.sh` and `*.zsh` represent installation and software-wise comands.
 
@@ -63,13 +48,11 @@ We have a command named `qdot` or `q` to premote things to be done instantly, yo
 ```bash
 q b # qdot bootstrap
 ```
-
 or use  `push`  or  `pull`  to remote git server
 
 ```bash
 q [push|pull] [-m message -t <refspec>]
 ```
-
 ## Acknowledgement
 
 QiangZiBro/[Qdotfiles](https://github.com/QiangZiBro/Qdotfiles)
