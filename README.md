@@ -28,7 +28,11 @@ qdot backup # copy your dotfiles to the Reponsitory
 qdot push -m "changes" -t [master`|dev|HEAD]
 ```
 
-## Presets：proxy
+### Init fresh ubuntu
+
+[init fresh ubuntu tutorial](docs/init_fresh_ubuntu.md)
+
+### proxy
 
 Make a proxy on 8999 port in your linux computer. I recommand use clash. see [clash tutorial](docs/clash.md)
 
