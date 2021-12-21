@@ -1,11 +1,14 @@
 downloads
 .DS_Store
 target
+.idea
+__pycache__
 
 # Secret files
-# ssh/config
+ssh/config
 git/.git-credentials
 ss/*.json
 
-.idea
-__pycache__
+clash/config.yaml
+clash/cache.db
+clash/Country.mmdb

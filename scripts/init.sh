@@ -28,7 +28,7 @@ export PATH=$PATH:~/.Qdotfiles/bin
 QDOTFILES="~/.Qdotfiles"
 
 # ss
-source ~/.Qdotfiles/ss/proxy.zsh
+source ~/.Qdotfiles/clash/proxy.zsh
 
 # zsh
 source_if_exists ~/.Qdotfiles/zsh/.zsh_profile

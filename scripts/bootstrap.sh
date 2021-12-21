@@ -39,7 +39,7 @@ greeting() {
 | Useful tools:                     |
 |   qdot -h                         | 
 |   proxy -h                        |
-\   qtool -h                        /
+\                                   /
  ----------------------------------
       \                    / \  //\
        \    |\___/|      /   \//  \\
@@ -64,6 +64,8 @@ greeting() {
 cp_file_if_exists() {
   if [ -f "$1" -a -e $2 ]; then
     cp "$1" "$2"
+  elif [ -d "$1" -a ! -e $2 ]; then
+    cp -r "$1" "$2"
   fi
 }
 
@@ -104,22 +106,25 @@ setup_config() {
   cp_file_if_exists zsh/.zsh_profile ~
 
   # nvim
-  mkdir -p ~/.config/nvim && cp neovim/init.vim ~/.config/nvim
+  # mkdir -p ~/.config/nvim && cp neovim/init.vim ~/.config/nvim
 
   # tmux
   cp tmux/.tmux.conf ~
 
   # git
-  cp git/.gitconfig ~
-  cp git/.gitmessage ~
-  cp_file_if_exists git/.git-credentials ~
+  # cp_file_if_exists git/.gitconfig ~
+  # cp_file_if_exists git/.gitmessage ~
+  # cp_file_if_exists git/.git-credentials ~
 
   # ssh
   cp_file_if_exists ssh/config ~/.ssh
 
   # python
   cp conda/.condarc ~
-  cp -r .pip ~
+  cp -r pip ~
+
+  # clash
+  cp_file_if_exists clash ~
 
 }
 
