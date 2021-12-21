@@ -7,13 +7,7 @@
   </p>
 </p>
 
-## Presets：proxy
-
-Make a proxy on 8999 port in your linux computer. I recommand use clash.
-
-see [clash tutorial](docs/clash.md)
-
-## Getting started
+### Getting started
 
 ```bash
 git clone git@gitee.com:daxiongpro/Qdotfiles.git .Qdotfiles
@@ -34,9 +28,6 @@ qdot backup # copy your dotfiles to the Reponsitory
 qdot push -m "changes" -t [master`|dev|HEAD]
 ```
 
-
-
-
 ## Presets：proxy
 
 Make a proxy on 8999 port in your linux computer. I recommand use clash. see [clash tutorial](docs/clash.md)
@@ -44,6 +35,8 @@ Make a proxy on 8999 port in your linux computer. I recommand use clash. see [cl
 Proxy utilities in Qdotfiles
 
 `proxy [on|off|status]`
+
+### Repo structure
 
 Each software owns a directory in root directory of the project, `install.sh` and `*.zsh` represent installation and software-wise comands.
 
