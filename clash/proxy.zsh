@@ -79,10 +79,11 @@ function proxy(){
 		echo "--------------"
 		echo "Network test"
 		echo "--------------"
-		proxy test
+		cg
 	elif [ "$1" = "up" ]; then
 		cd ~/clash
 		clash -d ~/clash
+	
 	else
 		_proxy_help
 	fi

@@ -1,12 +1,25 @@
 ### 选择节点的网站：
+
 http://clash.razord.top/#/proxies
 
-
 ### useage:
-	./clash -d .
 
+* make sure clash config exist.
+  `qdot b`
+* download config file
 
-port is 8999
+  ```bash
+  cd ~/clash
+  wget xxx.yaml # your clash config file. go to clash website to buy it.
+  ```
+* use tmux:
 
-### 参考文献：
-https://www.cnblogs.com/rogunt/p/15127947.html
+  ```
+  tmux new -s proxy
+  proxy up
+  ```
+* port is 8999
+
+### References：
+
+[clash-linux](https://www.cnblogs.com/rogunt/p/15127947.html "how to use clash on linux")
