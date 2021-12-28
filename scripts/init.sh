@@ -27,7 +27,7 @@ source_if_exists() {
 export PATH=$PATH:~/.Qdotfiles/bin
 QDOTFILES="~/.Qdotfiles"
 
-# ss
+# proxy
 source ~/.Qdotfiles/clash/proxy.zsh
 
 # zsh
@@ -43,7 +43,9 @@ source ~/.Qdotfiles/docker/docker.zsh
 source ~/.Qdotfiles/tmux/tmux.zsh
 
 # ros2
-source /opt/ros/foxy/setup.zsh
+if [ -f "/opt/ros/foxy/setup.zsh" ]; then
+    source /opt/ros/foxy/setup.zsh
+fi
 
 # 整理 PATH，删除重复路径
 if [ -n "$PATH" ]; then
