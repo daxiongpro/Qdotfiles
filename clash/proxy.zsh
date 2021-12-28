@@ -28,7 +28,7 @@ EOF
 }
 function proxy(){
 	MAC_PROXY_PORT=1087
-	LINUX_PROXY_PORT=7890
+	LINUX_PROXY_PORT=8999
 	PROXY_IP=127.0.0.1
 	if test "$(uname)" = "Darwin";then
 		PROXY_PORT=$MAC_PROXY_PORT
