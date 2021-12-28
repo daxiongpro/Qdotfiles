@@ -1,20 +1,27 @@
 <p align="center">
   <h3 align="center">daxiongproのdotfiles</h3>
-  <p align="center">
+  <p align="left">
    Development tools and dotfiles of daxiongpro, supporting mac and ubuntu in the same time.
   </br>
     <!-- a href="README_zh.md">ZH</a>|<a href="README.md">EN</a -->
   </p>
 </p>
 
+This repository is forked from [QiangZiBro](https://github.com/QiangZiBro)/**[Qdotfiles](https://github.com/QiangZiBro/Qdotfiles)** and I have made much changes to simplify the useage.
+
 ### Getting started
 
+* Clone the repository
+
 ```bash
-git clone git@gitee.com:daxiongpro/Qdotfiles.git .Qdotfiles
+git clone git@gitee.com:daxiongpro/Qdotfiles.git ~/.Qdotfiles
+```
 
-cd .Qdotfiles/scripts
+* if you have just install the Ubuntu operating system, just follow [init fresh ubuntu tutorial](docs/init_fresh_ubuntu.md) to install softwares like `zsh`.
+* do some preparations:
 
-bash bootstrap.sh
+```bash
+bash ~/.Qdotfiles/scripts/bootstrap.sh
 ```
 
 Now, you can just use Qdotfiles!!!
@@ -28,11 +35,7 @@ qdot backup # copy your dotfiles to the Reponsitory
 qdot push -m "changes" -t [master`|dev|HEAD]
 ```
 
-### Init fresh ubuntu
-
-[init fresh ubuntu tutorial](docs/init_fresh_ubuntu.md)
-
-### proxy
+### Proxy useage
 
 Make a proxy on 8999 port in your linux computer. I recommand use clash. see [clash tutorial](docs/clash.md)
 
@@ -60,10 +63,11 @@ q [push|pull] [-m message -t <refspec>]
 
 ## Acknowledgement
 
-QiangZiBro/[Qdotfiles](https://github.com/QiangZiBro/Qdotfiles)
+
 
 [holman](https://github.com/holman)/**[dotfiles](https://github.com/holman/dotfiles)**
 
 [mathiasbynens](https://github.com/mathiasbynens)/**[dotfiles](https://github.com/mathiasbynens/dotfiles)**
 
 [Speed Up Oh-My-Zsh](https://bennycwong.github.io/post/speeding-up-oh-my-zsh/)
+
