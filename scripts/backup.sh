@@ -18,7 +18,8 @@ cp_file_if_exists() {
 local_backup() {
 
   # vim
-  cp ~/.config/nvim/init.vim neovim
+  # cp ~/.config/nvim/init.vim neovim
+  cp_file_if_exists ~/.vimrc vim
 
   # zsh
   # ~/.zshrc只放实验性的配置，不进行备份
