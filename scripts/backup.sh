@@ -31,9 +31,9 @@ local_backup() {
   # git
   # 备份之前关闭了代理
   source clash/proxy.zsh
-  cp_file_if_exists ~/.gitconfig git
-  cp_file_if_exists ~/.gitmessage git
-  cp_file_if_exists ~/.git-credentials git
+  # cp_file_if_exists ~/.gitconfig git
+  # cp_file_if_exists ~/.gitmessage git
+  # cp_file_if_exists ~/.git-credentials git
   cp_file_if_exists ~/.zsh_profile zsh
   # ssh
   cp_file_if_exists ~/.ssh/config ssh
