@@ -107,6 +107,7 @@ setup_config() {
 
   # nvim
   # mkdir -p ~/.config/nvim && cp neovim/init.vim ~/.config/nvim
+  cp_file_if_exists vim/.vimrc ~
 
   # tmux
   cp tmux/.tmux.conf ~
