@@ -75,6 +75,10 @@ while [[ "$#" > 0 ]]; do case $1 in
     COMMAND="BACKUP"
     shift
     ;;
+  s | status)
+    COMMAND="STATUS"
+    shift
+    ;;
   -h | --help)
     HELP=1
     shift
@@ -142,5 +146,9 @@ elif [ "$COMMAND" = "BOOTSTRAP" ]; then
   /bin/bash ~/.Qdotfiles/scripts/bootstrap.sh
 elif [ "$COMMAND" = "BACKUP" ]; then
   /bin/bash ~/.Qdotfiles/scripts/backup.sh
+elif [ "$COMMAND" = "STATUS" ]; then
+  cq
+  git status
+
 
 fi
