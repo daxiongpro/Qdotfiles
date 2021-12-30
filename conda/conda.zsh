@@ -45,3 +45,4 @@ function conda_mv(){
 		conda remove --name $1 --all -y 
 	fi
 }
+
