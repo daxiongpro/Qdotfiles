@@ -8,7 +8,7 @@ Host l1
 	User caizhengyi
 	Port 6101
 Host l2
-	HostName 10.22.148.86
+	HostName 10.22.78.13
 	User caizhengyi
 	Port 22
 Host l3
