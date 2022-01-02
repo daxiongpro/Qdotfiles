@@ -64,4 +64,3 @@ if [ -n "$PATH" ]; then
 fi
 
 export PATH
-exec zsh
