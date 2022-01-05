@@ -101,6 +101,10 @@ check_project() {
 }
 
 setup_config() {
+
+  # apt
+  sudo cp apt/sources.list /etc/apt
+
   # zshrc
   cp zsh/.zshrc ~
   cp_file_if_exists zsh/.zsh_profile ~
