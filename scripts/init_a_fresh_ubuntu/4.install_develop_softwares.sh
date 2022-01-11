@@ -23,3 +23,8 @@ sudo dpkg -i wps-office_11.1.0.10702_amd64.deb
 sudo snap install pycharm-community --classic
 
 
+# remmina
+sudo apt-add-repository ppa:remmina-ppa-team/remmina-next
+sudo apt update
+sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret
+echo "remmina install still have bugs"
