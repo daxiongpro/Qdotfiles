@@ -139,7 +139,7 @@ main() {
   check_project
   # 把一些软件的配置文件放到home~目录下
   setup_config
-  exec zsh
+#  exec zsh
 }
 
 main
