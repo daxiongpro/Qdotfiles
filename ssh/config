@@ -25,9 +25,9 @@ Host l5
 	Port 6105
 
 Host geely
-	HostName 192.168.4.26
-	User cai
-	Port 22
+	HostName 192.168.4.100
+	User daxiongpro
+	Port 222
 
 Host geely2
 	HostName 10.186.176.198
