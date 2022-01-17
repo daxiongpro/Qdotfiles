@@ -10,7 +10,7 @@ elif test "$(expr substr $(uname -s) 1 5)" = "Linux"; then
   # linux installation branch
 
   sudo apt install zsh -y
-  if [ ! -d "${ZSH_CUSTOM:-~/.oh-my-zsh}" ]; then
+  if [ ! -d "$ZSH" ]; then
     git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
   fi
   cp ~/.Qdotfiles/zsh/.zshrc ~/.zshrc
