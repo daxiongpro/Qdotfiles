@@ -7,7 +7,7 @@
   </p>
 </p>
 
-This repository is forked from [QiangZiBro](https://github.com/QiangZiBro)/**[Qdotfiles](https://github.com/QiangZiBro/Qdotfiles)** and I have made much changes to simplify the useage.
+This repository is forked from [QiangZiBro](https://github.com/QiangZiBro)/[Qdotfiles](https://github.com/QiangZiBro/Qdotfiles) and I have made much changes to simplify the useage.
 
 ### Getting started
 
@@ -21,11 +21,11 @@ git clone git@gitee.com:daxiongpro/Qdotfiles.git ~/.Qdotfiles
 
 ```bash
 cd .Qdotfiles
-bash scripts/init_a_fresh_ubuntu/2.oh-my-zsh_install.sh
+bash zsh/install.sh
 ```
 
-* if you have just install the Ubuntu operating system, just follow [init fresh ubuntu tutorial](docs/init_fresh_ubuntu.md) to install softwares like `tmux`.
-* do some preparations:
+* If you have just install the Ubuntu operating system, just follow [init fresh ubuntu tutorial](docs/init_fresh_ubuntu.md) to install softwares like `tmux`.
+* Do some preparations:
 
 ```bash
 bash ~/.Qdotfiles/scripts/bootstrap.sh
@@ -39,12 +39,12 @@ Now, you can just use Qdotfiles!!!
 
 ```bash
 qdot backup # copy your dotfiles to the Reponsitory
-qdot push -m "changes" -t [master`|dev|HEAD]
+qdot push -m "changes" -t [master|dev|HEAD]
 ```
 
 ### Proxy useage
 
-Make a proxy on 8999 port in your linux computer. I recommand use clash. see [clash tutorial](docs/clash.md)
+Make a proxy on 8999 port in your linux computer. I recommand use clash. See [clash tutorial](docs/clash.md)
 
 Proxy utilities in Qdotfiles
 
@@ -70,8 +70,8 @@ q [push|pull] [-m message -t <refspec>]
 
 ## Acknowledgement
 
-[holman](https://github.com/holman)/**[dotfiles](https://github.com/holman/dotfiles)**
+[holman](https://github.com/holman)/[dotfiles](https://github.com/holman/dotfiles)
 
-[mathiasbynens](https://github.com/mathiasbynens)/**[dotfiles](https://github.com/mathiasbynens/dotfiles)**
+[mathiasbynens](https://github.com/mathiasbynens)/[dotfiles](https://github.com/mathiasbynens/dotfiles)
 
 [Speed Up Oh-My-Zsh](https://bennycwong.github.io/post/speeding-up-oh-my-zsh/)
