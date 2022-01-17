@@ -17,3 +17,5 @@ sh scripts/bootstrap.sh # copy "dotfiles" to your home dir "~"
 ```bash
 source ~/.zshrc
 ```
+
+![1642404567518.png](image/init_fresh_ubuntu/girl.png)
