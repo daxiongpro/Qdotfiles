@@ -1,13 +1,14 @@
-<p align="center">
-  <h3 align="center">daxiongproのdotfiles</h3>
-  <p align="left">
-   Development tools and dotfiles of daxiongpro, supporting mac and ubuntu in the same time.
-  </br>
-    <!-- a href="README_zh.md">ZH</a>|<a href="README.md">EN</a -->
-  </p>
-</p>
-
-This repository is forked from [QiangZiBro](https://github.com/QiangZiBro)/[Qdotfiles](https://github.com/QiangZiBro/Qdotfiles) and I have made much changes to simplify the useage.
+<div align="center">
+	<img src="./image/README/ubuntu.png" width = "100" alt="ubuntu logo" align=center />
+	<p align="center">
+	<h3 align="center">daxiongproのdotfiles</h3>
+		<p align="center">
+			Development tools and dotfiles of daxiongpro, help you use Ubuntu(linux easily!)
+		</br>
+		*All scripts are tested on ubuntu 20.04 LTS.
+		</p>
+	</p>
+</div>
 
 ### Getting started
 
@@ -69,6 +70,8 @@ q [push|pull] [-m message -t <refspec>]
 ```
 
 ## Acknowledgement
+
+[QiangZiBro](https://github.com/QiangZiBro)/[Qdotfiles](https://github.com/QiangZiBro/Qdotfiles)
 
 [holman](https://github.com/holman)/[dotfiles](https://github.com/holman/dotfiles)
 
