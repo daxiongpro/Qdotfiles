@@ -8,7 +8,9 @@ if test "$(uname)" = "Darwin"; then
 elif test "$(expr substr $(uname -s) 1 5)" = "Linux"; then
   echo installing zsh
   # linux installation branch
-  wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -qO - | zsh
+
+  sudo apt install zsh -y
+  git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
   cp ~/.Qdotfiles/zsh/.zshrc ~/.zshrc
   chsh $USER -s $(which zsh)
   # zsh plugins
@@ -19,6 +21,10 @@ elif test "$(expr substr $(uname -s) 1 5)" = "Linux"; then
   if [ ! -d "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting" ]; then
   	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
   fi
+
+  exec zsh
+  source ~/.zshrc
+  echo "please reboot"
+
 fi
 
-curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh && source ~/.Qdotfiles/zsh/theme.zsh
