@@ -54,7 +54,7 @@ Usage 5[TODO]: use multi processes
 
 EOF
 
-  exit 1
+  exit 0
 }
 
 # parse params
