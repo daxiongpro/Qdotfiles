@@ -3,7 +3,7 @@
 	<p align="center">
 	<h3 align="center">daxiongproのdotfiles</h3>
 		<p align="center">
-			Development tools and dotfiles of daxiongpro, help you use Ubuntu(linux easily!)
+			Development tools and dotfiles of daxiongpro, help you use Ubuntu(Linux) easily!
 		</br>
 		*All scripts are tested on ubuntu 20.04 LTS.
 		</p>
@@ -23,7 +23,7 @@
 git clone git@gitee.com:daxiongpro/Qdotfiles.git ~/.Qdotfiles
 ```
 
-* This repository is based on zsh, please make sure you have installed it firstly.
+* This repository is based on zsh and oh-my-zsh, please make sure you have installed it firstly.
 
 ```bash
 cd .Qdotfiles
@@ -55,6 +55,40 @@ Proxy utilities in Qdotfiles
 
 `proxy [on|off|up|status]`
 
+```
+➜  ~ proxy on
+➜  ~ proxy status
+--------------
+Proxy setting
+--------------
+http_proxy=127.0.0.1:8999
+https_proxy=127.0.0.1:8999
+HTTP_PROXY=127.0.0.1:8999
+HTTPS_PROXY=127.0.0.1:8999
+--------------
+Network test
+--------------
+[0.00 s] baidu :200 OK✅
+[1.00 s] google:200 OK✅
+➜  ~
+➜  ~
+➜  ~ proxy off
+➜  ~ proxy status
+--------------
+Proxy setting
+--------------
+http_proxy=
+https_proxy=
+HTTP_PROXY=
+HTTPS_PROXY=
+--------------
+Network test
+--------------
+[1.00 s] baidu :200 OK✅
+[3.00 s] google:None�
+➜  ~
+```
+
 ### 🎃Repo structure
 
 Each software owns a directory in root directory of the project, `install.sh` and `*.zsh` represent installation and software-wise comands.
@@ -70,7 +104,7 @@ q b # qdot bootstrap
 or use  `push`  or  `pull`  to remote git server
 
 ```bash
-q [push|pull] [-m message -t <refspec>]
+q [push|pull] [-m message] [-t <refspec>]
 ```
 
 ## Acknowledgement
