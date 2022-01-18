@@ -1,1 +1,0 @@
-bash ../../zsh/install.sh
