@@ -13,7 +13,7 @@
 ### 🚀Init a fresh Ubuntu
 
 * If you have just install the Ubuntu operating system, just follow [init fresh ubuntu tutorial](docs/init_fresh_ubuntu.md) to install softwares like `git,zsh,tmux` et al.
-* All scripts about init new ubuntu OS is in `Qdotfiles/scripts/init_a_fresh_ubuntu/{{ 1-10 }}`. {{ 1-3 }} are required，{{ 4-10 }} can be executed as you want!
+* All scripts about init new ubuntu OS is in `Qdotfiles/scripts/init_a_fresh_ubuntu/{{ 1-6 }}`.
 
 ### ☕Getting started
 
