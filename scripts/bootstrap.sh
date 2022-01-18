@@ -118,7 +118,9 @@ check_project() {
 setup_config() {
 
   # apt
-  sudo cp apt/sources_zhongkeda.list /etc/apt
+  if [ `grep -c "ustc" /etc/apt/sources.list` -ne '0' ]; then # if do not exist ustc sources
+    sudo cp apt/sources_zhongkeda.list /etc/apt
+  fi
 
   # zshrc
   cp zsh/.zshrc ~
