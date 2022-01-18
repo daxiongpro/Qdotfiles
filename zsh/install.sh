@@ -23,6 +23,7 @@ elif test "$(expr substr $(uname -s) 1 5)" = "Linux"; then
   if [ ! -d "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting" ]; then
   	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
   fi
+  sudo apt install -y autojump
 
   exec zsh
   source ~/.zshrc
