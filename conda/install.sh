@@ -30,5 +30,6 @@ elif test "$(expr substr $(uname -s) 1 5)" = "Linux"; then
   # install, I want to install as multi-user
   echo install conda
   sudo bash $conda_linux -p /usr/miniconda3 -b -u
+  sudo chmod -R 777 /usr/miniconda3
 fi
 #fi
