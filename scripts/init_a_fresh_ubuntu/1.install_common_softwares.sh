@@ -29,4 +29,4 @@ EOF
   fi
 }
 
-main
+main $1
