@@ -41,7 +41,9 @@ cuda10_install() {
   fi
   cd ~/Downloads
     # 下载安装
-  wget http://developer.download.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.243_418.87.00_linux.run
+  if [ ! -f ./cuda* ]; then
+    wget http://developer.download.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.243_418.87.00_linux.run
+  fi
   sudo sh cuda_10.1.243_418.87.00_linux.run
 
 
