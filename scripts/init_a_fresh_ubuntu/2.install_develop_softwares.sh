@@ -35,6 +35,9 @@ main() {
   elif [ "$1" = "--vscode" ]; then
     # vscode
     sudo snap install code --classic
+  elif [ "$1" = "--wechat" ]; then
+    # wechat
+    sudo snap install electronic-wechat 
   else
     cat <<EOF
     Install some develope softwares
@@ -43,6 +46,7 @@ main() {
     --pycharm
     --remmina
     --miniconda
+    --wechat
 EOF
   fi
 }
