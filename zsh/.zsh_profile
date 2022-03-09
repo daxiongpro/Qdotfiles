@@ -61,9 +61,9 @@ then
 	linux_aliases
 
 	#CUDA
-	if [ -d "/usr/local/cuda/bin" ];then
-		export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
-		export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+	if [ -d "/usr/local/cuda-11.1/bin" ];then
+		export PATH=/usr/local/cuda-11.1/bin${PATH:+:${PATH}}
+		export LD_LIBRARY_PATH=/usr/local/cuda-11.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 	fi
 	#homebrew
 	if [ -d /home/linuxbrew/.linuxbrew/ ];then
