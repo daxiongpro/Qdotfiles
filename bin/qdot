@@ -133,11 +133,8 @@ if [ "$COMMAND" = "UPDATE" ]; then
 elif [ "$COMMAND" = "PUSH" ]; then
   cd ~/.Qdotfiles
   git pull origin $DESTINATION
-  bash ~/.Qdotfiles/scripts/backup.sh
   git add -A && git commit -m "$MESSAGE"
   git push origin "$DESTINATION"
-#  wait
-#  cd - >/dev/null
 
 elif [ "$COMMAND" = "PULL" ]; then
   cd ~/.Qdotfiles
