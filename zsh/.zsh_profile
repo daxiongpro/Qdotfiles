@@ -15,21 +15,6 @@ hserver(){
 	ip=`qtool ip`
 	python -m http.server $port --bind ${ip}
 }
-caps()
-{
-	cmd=${1:-'ls'}
-	machines=${2:-'l0 l1 l4 l5'}
-	pssh -i -H "$machines" "cd ~/caps3d && $cmd"
-}
-
-capsup()
-{
-	m=${1:-'l0'}
-	o=${2:-'origin'}
-	b=${3:-'dev'}
-	caps "git push ${o} ${b}" $m && caps "git pull ${o} ${b}"
-}
-
 
 common_aliases () {
     alias ei="vim ~/.Qdotfiles/scripts/init.sh"
@@ -38,32 +23,19 @@ common_aliases () {
     alias eb="vim ~/.zshrc"
     alias cz="cd ~/.Qdotfiles/zsh/"
     alias cq="cd ~/.Qdotfiles/"
-    alias qb="qdot b"
 }
-mac_aliases () {
-    alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-    alias meshlab="/Applications/meshlab.app/Contents/MacOS/meshlab"
-    alias meshlabserver="/Applications/meshlab.app/Contents/MacOS/meshlabserver"
-}
-linux_aliases () {
-    alias hello="world"
-}
+
 
 common_aliases
 
 # 系统特有的环境变量
-if test "$(uname)" = "Darwin"
+if test "$(expr substr $(uname -s) 1 5)" = "Linux"
 then
-	mac_aliases
-
-elif test "$(expr substr $(uname -s) 1 5)" = "Linux"
-then
-	linux_aliases
 
 	#CUDA
-	if [ -d "/usr/local/cuda-11.1/bin" ];then
-		export PATH=/usr/local/cuda-11.1/bin${PATH:+:${PATH}}
-		export LD_LIBRARY_PATH=/usr/local/cuda-11.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+	if [ -d "/usr/local/cuda/bin" ];then
+		export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+		export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 	fi
 	#homebrew
 	if [ -d /home/linuxbrew/.linuxbrew/ ];then
