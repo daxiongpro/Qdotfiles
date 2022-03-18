@@ -23,6 +23,7 @@ common_aliases () {
     alias eb="vim ~/.zshrc"
     alias cz="cd ~/.Qdotfiles/zsh/"
     alias cq="cd ~/.Qdotfiles/"
+    alias start="nautilus"
 }
 
 
