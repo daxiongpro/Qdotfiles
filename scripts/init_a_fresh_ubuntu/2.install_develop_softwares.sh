@@ -12,7 +12,15 @@ main() {
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     sudo dpkg -i google-chrome-stable_current_amd64.deb 
 
+  elif [ "$1" = "--edge" ]; then
+    # microsoft edge
+    rm *edge*
+    wget https://go.microsoft.com/fwlink\?linkid\=2149051 
+    mv 'fwlink?linkid=2149051' edge.deb
+    sudo apt install -f -y
+    sudo dpkg -i edge.deb
 
+ 
   elif [ "$1" = "--wps" ]; then 
     # wps
     rm *wps*
@@ -42,6 +50,7 @@ main() {
     cat <<EOF
     Install some develope softwares
     --chrome
+    --edge
     --wps
     --pycharm
     --remmina
