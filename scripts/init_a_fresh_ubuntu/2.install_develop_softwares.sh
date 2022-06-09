@@ -55,6 +55,7 @@ main() {
     --pycharm
     --remmina
     --miniconda
+    --vscode
     --wechat
 EOF
   fi
