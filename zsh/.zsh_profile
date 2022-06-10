@@ -25,6 +25,7 @@ common_aliases () {
     alias cq="cd ~/.Qdotfiles/"
     alias start="nautilus"
     alias wn="watch -n 1 nvidia-smi"
+    alias cinit="cd ~/.Qdotfiles/scripts/init_a_fresh_ubuntu"
 }
 
 
