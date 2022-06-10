@@ -17,6 +17,7 @@
 
 ### ☕Getting started
 
+* Change hosts file so that you can use github:[github520_github](https://github.com/521xueweihan/GitHub520) or [github520_gitee](https://gitee.com/monkeycc/GitHub520?_from=gitee_search)
 * Clone the repository
 
 ```bash
@@ -38,7 +39,6 @@ bash ~/.Qdotfiles/scripts/bootstrap.sh
 
 Now, you can just use Qdotfiles!!!
 
----
 
 ### 🍺Make changes, and commit to your repository
 
@@ -50,44 +50,6 @@ qdot push -m "changes" -t [master|dev|HEAD]
 ### 🎧Proxy useage
 
 Make a proxy on 8999 port in your linux computer. I recommand use clash. See [clash tutorial](docs/clash.md)
-
-Proxy utilities in Qdotfiles
-
-`proxy [on|off|up|status]`
-
-```
-➜  ~ proxy on
-➜  ~ proxy status
---------------
-Proxy setting
---------------
-http_proxy=127.0.0.1:8999
-https_proxy=127.0.0.1:8999
-HTTP_PROXY=127.0.0.1:8999
-HTTPS_PROXY=127.0.0.1:8999
---------------
-Network test
---------------
-[0.00 s] baidu :200 OK✅
-[1.00 s] google:200 OK✅
-➜  ~
-➜  ~
-➜  ~ proxy off
-➜  ~ proxy status
---------------
-Proxy setting
---------------
-http_proxy=
-https_proxy=
-HTTP_PROXY=
-HTTPS_PROXY=
---------------
-Network test
---------------
-[1.00 s] baidu :200 OK✅
-[3.00 s] google:None�
-➜  ~
-```
 
 ### 🎃Repo structure
 
@@ -116,3 +78,4 @@ q [push|pull] [-m message] [-t <refspec>]
 [mathiasbynens](https://github.com/mathiasbynens)/[dotfiles](https://github.com/mathiasbynens/dotfiles)
 
 [Speed Up Oh-My-Zsh](https://bennycwong.github.io/post/speeding-up-oh-my-zsh/)
+
