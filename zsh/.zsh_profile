@@ -26,6 +26,7 @@ common_aliases () {
     alias start="nautilus"
     alias wn="watch -n 1 nvidia-smi"
     alias cinit="cd ~/.Qdotfiles/scripts/init_a_fresh_ubuntu"
+    alias nrst="sudo /etc/init.d/networking restart" # network restart 修改host后生效
 }
 
 
