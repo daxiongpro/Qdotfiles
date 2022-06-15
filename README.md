@@ -17,11 +17,11 @@
 
 ### ☕Getting started
 
-* Change hosts file so that you can use github:[github520_github](https://github.com/521xueweihan/GitHub520) or [github520_gitee](https://gitee.com/monkeycc/GitHub520?_from=gitee_search)
+* See [github usage without proxy](docs/github.md)
 * Clone the repository
 
 ```bash
-git clone git@gitee.com:daxiongpro/Qdotfiles.git ~/.Qdotfiles
+git clone https://hub.fastgit.xyz/daxiongpro/Qdotfiles.git ~/.Qdotfiles
 ```
 
 * This repository is based on zsh and oh-my-zsh, please make sure you have installed it firstly.
@@ -38,7 +38,6 @@ bash ~/.Qdotfiles/scripts/bootstrap.sh
 ```
 
 Now, you can just use Qdotfiles!!!
-
 
 ### 🍺Make changes, and commit to your repository
 
@@ -72,10 +71,3 @@ q [push|pull] [-m message] [-t <refspec>]
 ## Acknowledgement
 
 [QiangZiBro](https://github.com/QiangZiBro)/[Qdotfiles](https://github.com/QiangZiBro/Qdotfiles)
-
-[holman](https://github.com/holman)/[dotfiles](https://github.com/holman/dotfiles)
-
-[mathiasbynens](https://github.com/mathiasbynens)/[dotfiles](https://github.com/mathiasbynens/dotfiles)
-
-[Speed Up Oh-My-Zsh](https://bennycwong.github.io/post/speeding-up-oh-my-zsh/)
-
