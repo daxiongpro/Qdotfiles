@@ -4,9 +4,13 @@
 
 * Use [fastgit](https://hub.fastgit.xyz/) instead of [github](https://github.com/).
 
-### Option2
+#### Option2
 
 * Use [github520](https://github.com/521xueweihan/GitHub520) to change the hosts file.
+
+#### Option3
+
+Use [github 增强](https://greasyfork.org/zh-CN/scripts/412245) plugin in ***GreasyFork***
 
 ### How to push on github after 2021.8.13?
 
