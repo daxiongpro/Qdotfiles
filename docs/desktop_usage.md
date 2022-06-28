@@ -16,4 +16,4 @@
 
 # 附录：如何安装远程桌面？
 
-参考：[在Ubuntu18.04上安装远程桌面](https://github.com/daxiongpro/Qdotfiles/blob/master/docs/desktop.md)
+参考：[在Ubuntu18.04上安装远程桌面](https://github.com/daxiongpro/Qdotfiles/blob/master/docs/desktop_install.md)
