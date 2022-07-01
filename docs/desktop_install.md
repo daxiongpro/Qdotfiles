@@ -1,6 +1,6 @@
 # Install remote desktop on Ubuntu 18.04
 
-## 在**`电脑1`**上安装远程桌面，并用**`电脑2`**远程登录电脑1的用户
+## 在 `电脑1`**上安装远程桌面，并用** `电脑2`远程登录电脑1的用户
 
 ## Install
 
@@ -42,7 +42,6 @@ gnome-session
 ```bash
 sudo systemctl restart xrdp
 ```
-
 
 ### 参考文献：
 
