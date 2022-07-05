@@ -17,7 +17,7 @@ main() {
     rm *edge*
     wget https://go.microsoft.com/fwlink\?linkid\=2149051 
     mv 'fwlink?linkid=2149051' edge.deb
-    sudo apt install -f -y
+    sudo apt install -f
     sudo dpkg -i edge.deb
 
  
@@ -39,7 +39,7 @@ main() {
     sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret
   elif [ "$1" = "--miniconda" ]; then
     # miniconda
-    bash ../../conda/install.sh
+    bash ~/.Qdotfiles/conda/install.sh
   elif [ "$1" = "--vscode" ]; then
     # vscode
     sudo snap install code --classic
