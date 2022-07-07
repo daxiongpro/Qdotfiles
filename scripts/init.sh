@@ -47,6 +47,9 @@ if [ -f "/opt/ros/melodic/setup.zsh" ]; then
     source /opt/ros/melodic/setup.zsh
 fi
 
+if [ -f "/opt/ros/noetic/setup.zsh" ]; then
+    source /opt/ros/noetic/setup.zsh
+fi
 
 # ros2
 if [ -f "/opt/ros/foxy/setup.zsh" ]; then
