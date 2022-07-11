@@ -14,10 +14,10 @@ main() {
 
   elif [ "$1" = "--edge" ]; then
     # microsoft edge
+    sudo apt install -f -y
     rm *edge*
     wget https://go.microsoft.com/fwlink\?linkid\=2149051 
     mv 'fwlink?linkid=2149051' edge.deb
-    sudo apt install -f
     sudo dpkg -i edge.deb
 
  
