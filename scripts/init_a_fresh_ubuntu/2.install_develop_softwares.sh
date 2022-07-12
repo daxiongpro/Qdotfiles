@@ -48,7 +48,13 @@ main() {
     sudo snap install code --classic
   elif [ "$1" = "--wechat" ]; then
     # wechat
-    sudo snap install electronic-wechat 
+    sudo snap install electronic-wechat
+  elif [ "$1" = "--shutter" ]; then
+    # shutter
+    sudo add-apt-repository ppa:shutter/ppa
+    sudo apt-get update
+    sudo apt-get install shutter
+
   else
     cat <<EOF
     Install some develope softwares
@@ -61,6 +67,7 @@ main() {
     --miniconda
     --vscode
     --wechat
+    --shutter
 EOF
   fi
 }
