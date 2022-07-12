@@ -28,9 +28,12 @@ main() {
     sudo dpkg -i wps-office_11.1.0.10702_amd64.deb
 
 
-  elif [ "$1" = "--pycharm" ]; then 
+  elif [ "$1" = "--pycharm-community" ]; then
     # pycharm-community
     sudo snap install pycharm-community --classic
+    elif [ "$1" = "--pycharm-professional" ]; then
+    # pycharm-professional
+    sudo snap install pycharm-professional --classic
   elif [ "$1" = "--remmina" ]; then
     # remmina
     echo "please use apt/sources_zhongkeda.list"
@@ -52,7 +55,8 @@ main() {
     --chrome
     --edge
     --wps
-    --pycharm
+    --pycharm-community
+    --pycharm-professional
     --remmina
     --miniconda
     --vscode
