@@ -42,6 +42,10 @@ source ~/.Qdotfiles/docker/docker.zsh
 # tmux
 source ~/.Qdotfiles/tmux/tmux.zsh
 
+# hosts
+source ~/.Qdotfiles/host/hosts.zsh
+
+
 # ros1
 if [ -f "/opt/ros/melodic/setup.zsh" ]; then
     source /opt/ros/melodic/setup.zsh
