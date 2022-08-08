@@ -1,5 +1,5 @@
 #!/bin/bash
-version="3.0a"
+
 
 set -e
 if test "$(uname)" = "Darwin"; then
@@ -7,20 +7,7 @@ if test "$(uname)" = "Darwin"; then
   brew install tmux
 
 elif test "$(expr substr $(uname -s) 1 5)" = "Linux"; then
-  if [ ! -f /usr/local/bin/tmux ]; then
-    #https://gist.github.com/joelrich/2f6fa444649adaae8b8499e7b3a5769e
-    sudo apt update
-    sudo apt install -y build-essential autoconf automake pkg-config libevent-dev libncurses5-dev bison byacc
-    if [ -e /tmp/tmux ]; then
-      rm -rf /tmp/tmux
-    fi
-    git clone https://github.com/tmux/tmux.git /tmp/tmux
-    cd /tmp/tmux
-    git checkout "$version"
-    sh autogen.sh
-    ./configure && make
-    sudo make install
-  fi
+  sudo apt install tmux
 fi
 
 # tmux plug manager
@@ -29,8 +16,13 @@ if [ ! -d ~/.tmux/plugins/ ]; then
 fi
 
 if [ ! -d ~/.tmux/plugins/tpm ]; then
+  # 进入相应位置
   cd ~/.tmux/plugins/
-  git clone https://github.com/tmux-plugins/tpm
+  git clone https://hub.fastgit.xyz/tmux-plugins/tpm
+
+  # 下载插件
+  git clone https://hub.fastgit.xyz/tmux-plugins/tmux-resurrect.git # 保存tmux会话到disk
+  git clone https://hub.fastgit.xyz/tmux-plugins/tmux-continuum.git # 定时保存，自动加载
 fi
 tmux source ~/.tmux.conf
 
