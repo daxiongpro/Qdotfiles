@@ -29,6 +29,7 @@ common_aliases () {
     alias nrst="sudo /etc/init.d/networking restart" # network restart 修改host后生效
     alias dsq="docker start qdot1804nvidia"
     alias deq="docker exec -it qdot1804nvidia /bin/zsh"
+    alias pycharm="sh /opt/pycharm-2022.2/bin/pycharm.sh"
 }
 
 
