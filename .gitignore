@@ -13,3 +13,4 @@ clash/config.yaml
 clash/cache.db
 clash/Country.mmdb
 ssh/config
+.vscode
