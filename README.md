@@ -21,7 +21,7 @@
 * Clone the repository
 
 ```bash
-git clone https://hub.fastgit.xyz/daxiongpro/Qdotfiles.git ~/.Qdotfiles
+git clone https://github.com/daxiongpro/Qdotfiles.git ~/.Qdotfiles
 ```
 
 * This repository is based on zsh and oh-my-zsh, please make sure you have installed it firstly.
