@@ -133,7 +133,7 @@ setup_config() {
 
   # python
   cp conda/.condarc ~
-  cp -r pip ~
+  cp -r pip ~/.pip
 
   # clash
   cp_file_if_exists clash ~
