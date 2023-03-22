@@ -1,13 +1,13 @@
 #!/bin/bash
 set -ex
 
-function zsh_install()
+zsh_install()
 {
   echo installing zsh
   sudo apt install zsh -y
 }
 
-function oh_my_zsh_install()
+oh_my_zsh_install()
 {
   if [ ! -d ~/.oh-my-zsh ]; then
     echo installing oh_my_zsh
@@ -15,7 +15,7 @@ function oh_my_zsh_install()
   fi
 }
 
-function zsh_plugin_install()
+zsh_plugin_install()
 {
   # zsh plugins
   if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ]; then
@@ -27,7 +27,7 @@ function zsh_plugin_install()
   fi
 }
 
-function use_zsh()
+use_zsh()
 {
   source ~/.Qdotfiles/scripts/utils/cp_file_if_exists.zsh
   cp_file_if_exists ~/.Qdotfiles/zsh/.zshrc ~

@@ -1,5 +1,5 @@
 # 将 .Qdotfiles 的.文件复制到家目录下
-function backup_qdot_to_local() 
+backup_qdot_to_local() 
 {
   source ~/.Qdotfiles/scripts/utils/cp_file_if_exists.zsh
   # apt
@@ -18,7 +18,7 @@ function backup_qdot_to_local()
 
 }
 
-function main()
+main()
 {
   backup_qdot_to_local
 }

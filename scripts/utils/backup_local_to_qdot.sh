@@ -1,5 +1,5 @@
 # 将家目录下的.文件复制到 .Qdotfiles 对应目录下
-function backup_local_to_qdot() {
+backup_local_to_qdot() {
   source ~/.Qdotfiles/scripts/utils/cp_file_if_exists.zsh
   root_dir=$(realpath $(pwd)/../../)
   echo "root_dir:${root_dir}"
@@ -11,7 +11,7 @@ function backup_local_to_qdot() {
   # ~/.zshrc只放实验性的配置，不进行备份
 }
 
-function main()
+main()
 {
   backup_local_to_qdot
 }

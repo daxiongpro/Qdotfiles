@@ -1,6 +1,6 @@
 
 
-function source_()
+source_()
 {
   source ~/.Qdotfiles/scripts/utils/source_if_exists.zsh
 
@@ -19,7 +19,7 @@ function source_()
 
 }
 
-function _delete_redundant_path()
+_delete_redundant_path()
 {
   # 整理 PATH，删除重复路径
   if [ -n "$PATH" ]; then
@@ -38,7 +38,7 @@ function _delete_redundant_path()
   fi
 }
 
-function export_()
+export_()
 {
   export CUDA_HOME=/usr/local/cuda
   export PATH=$PATH:$CUDA_HOME/bin
@@ -50,7 +50,7 @@ function export_()
   export PATH
 }
 
-function main()
+main()
 {
   source_
   export_

@@ -1,4 +1,4 @@
-function source_if_exists() {
+source_if_exists() {
   file="$1"
 
   if [ -f "$file" ]; then
