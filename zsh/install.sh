@@ -31,7 +31,6 @@ use_zsh()
 {
   source ~/.Qdotfiles/scripts/utils/cp_file_if_exists.zsh
   cp_file_if_exists ~/.Qdotfiles/zsh/.zshrc ~
-  cp_file_if_exists zsh/.zsh_profile ~
   chsh $USER -s $(which zsh)
   exec zsh
   source ~/.zshrc

@@ -9,7 +9,6 @@ backup_qdot_to_local()
   root_dir=~/.Qdotfiles
   echo "root_dir:${root_dir}"
   cp_file_if_exists ${root_dir}/zsh/.zshrc ~
-  cp_file_if_exists ${root_dir}/zsh/.zsh_profile ~
   cp_file_if_exists ${root_dir}/vim/.vimrc ~
   cp_file_if_exists ${root_dir}/tmux/.tmux.conf ~
   cp_file_if_exists ${root_dir}/ssh/config ~/.ssh
