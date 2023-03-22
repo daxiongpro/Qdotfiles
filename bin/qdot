@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/zsh
 #---------------------------------------------------------------------------------
 # Lazy man script
 # Author: QiangZiBro
@@ -140,12 +140,13 @@ elif [ "$COMMAND" = "PULL" ]; then
   cd ~/.Qdotfiles
   git pull origin $DESTINATION
 elif [ "$COMMAND" = "BOOTSTRAP" ]; then
+  bash ~/.Qdotfiles/scripts/utils/greeting.sh
   bash ~/.Qdotfiles/scripts/utils/backup_qdot_to_local.sh
+  # zsh
+  source ~/.zshrc
 elif [ "$COMMAND" = "BACKUP" ]; then
   bash ~/.Qdotfiles/scripts/utils/backup_local_to_qdot.sh
 elif [ "$COMMAND" = "STATUS" ]; then
   cd ~/.Qdotfiles
   git status
-
-
 fi

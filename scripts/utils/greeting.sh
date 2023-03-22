@@ -53,3 +53,10 @@ greeting() {
 EOF
   printf "$RESET"
 }
+
+main()
+{
+  greeting
+}
+
+main
