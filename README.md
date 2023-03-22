@@ -10,10 +10,9 @@
 	</p>
 </div>
 
-### ☕Getting started
+### ☕Clone the repository
 
 * See [github usage without proxy](docs/github.md)
-* Clone the repository
 
 ```bash
 git clone https://github.com/daxiongpro/Qdotfiles.git ~/.Qdotfiles
@@ -23,35 +22,61 @@ git clone https://github.com/daxiongpro/Qdotfiles.git ~/.Qdotfiles
 
 Make a proxy on 8999 port in your linux computer. I recommand use clash. See [clash tutorial](docs/clash.md)
 
-### 🚀Init a fresh Ubuntu
+```bash
+# Terminal 1
+cd ~/.Qdotfiles
+source clash/proxy.zsh
+proxy download
+proxy up
 
-* If you have just install the Ubuntu operating system, just follow [init fresh ubuntu tutorial](docs/init_fresh_ubuntu.md) to install softwares like `git,zsh,tmux` et al.
-* All scripts about init new ubuntu OS is in `Qdotfiles/scripts/init_a_fresh_ubuntu/{{ 1-6 }}`.
+# Terminal 2
+cd ~/.Qdotfiles
+source clash/proxy.zsh
+proxy up
+proxy status
 
-### 🍺Make changes, and commit to your repository
+```
+
+### ZSH install and use oh-my-zsh
+
+* install zsh and oh-my-zsh
+* copy .zshrc to home
+
+* chsh from bash to zsh
+* source .zshrc
+
+```bash
+cd ~/.Qdotfiles
+sh scripts/init_a_fresh_ubuntu/1.install_common_softwares.sh --zsh
+```
+
+### ☃Bootstrap qdotfiles
+
+We have a command named `qdot` or `q` to premote things to be done instantly, you can use a single command setup config in this repo to your computer
+
+* greeting
+* copy dotfiles to home
+* source .zshrc
+
+```bash
+q b # qdot bootstrap
+```
+
+🍺Make changes, and commit to your repository
 
 ```bash
 qdot backup # copy your dotfiles to the Reponsitory
 qdot push -m "changes" -t [master|dev|HEAD]
 ```
 
+### 🚀Init a fresh Ubuntu
+
+* If you have just install the Ubuntu operating system, just follow [init fresh ubuntu tutorial](docs/init_fresh_ubuntu.md) to install softwares like `git,zsh,tmux` et al.
+* All scripts about init new ubuntu OS is in `Qdotfiles/scripts/init_a_fresh_ubuntu/{{ 1-6 }}`.
+
 ### 🎃Repo structure
 
 Each software owns a directory in root directory of the project, `install.sh` and `*.zsh` represent installation and software-wise comands.
-
-### ☃Command line support to manage dotfiles
-
-We have a command named `qdot` or `q` to premote things to be done instantly, you can use a single command setup config in this repo to your computer
-
-```bash
-q b # qdot bootstrap
-```
-
-or use  `push`  or  `pull`  to remote git server
-
-```bash
-q [push|pull] [-m message] [-t <refspec>]
-```
 
 ## Acknowledgement
 
