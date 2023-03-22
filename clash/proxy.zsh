@@ -1,12 +1,14 @@
-function clash_download()
+clash_download()
 {
 	cd ~
-	git clone git@github.com:daxiongpro/clash.git
-	cd clash
-	./clash -d .
+	if [ ! -d clash ]; then
+		git clone git@github.com:daxiongpro/clash.git
+	else
+		echo "clash is already exists."
+	fi
 }
 
-function _access_url()
+_access_url()
 {
 	1=${1:-google}
 
@@ -53,9 +55,9 @@ function proxy(){
 	##        proxy commands        ##
 	##################################
 
-	if [ "$1" = "download" ]; then
+	if [ "$1" = "download" ] || [ "$1" = "d" ]; then
 		clash_download
-		
+
 	elif [ "$1" = "on" ]; then
 		export http_proxy="$PROXY_IP:$PROXY_PORT"
 		export https_proxy="$PROXY_IP:$PROXY_PORT"
@@ -73,8 +75,8 @@ function proxy(){
 
 	elif [ "$1" = "up" ]; then
 		cd ~/clash
-		clash -d ~/clash
-	
+		./clash -d .
+
 	else
 		_proxy_help
 	fi
