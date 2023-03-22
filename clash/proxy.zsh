@@ -48,7 +48,7 @@ Command:
 EOF
 }
 function proxy(){
-	LINUX_PROXY_PORT=8999
+	PROXY_PORT=8999
 	PROXY_IP=127.0.0.1
 
 	##################################
