@@ -1,5 +1,5 @@
 # 将家目录下的.文件复制到 .Qdotfiles 对应目录下
-backup_local() {
+function backup_local_to_qdot() {
   source ~/.Qdotfiles/scripts/utils/cp_file_if_exists.zsh
   cp_file_if_exists ~/.vimrc vim
   cp ~/.tmux.conf tmux
@@ -10,3 +10,9 @@ backup_local() {
   # cp ~/.zshrc zsh
 }
 
+function main()
+{
+  backup_local_to_qdot
+}
+
+main

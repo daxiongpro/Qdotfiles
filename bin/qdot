@@ -67,6 +67,10 @@ while [[ "$#" > 0 ]]; do case $1 in
     COMMAND="PULL"
     shift
     ;;
+  b | bootstrap)
+    COMMAND="BOOTSTRAP"
+    shift
+    ;;
   bc | backup)
     COMMAND="BACKUP"
     shift
@@ -135,9 +139,10 @@ elif [ "$COMMAND" = "PUSH" ]; then
 elif [ "$COMMAND" = "PULL" ]; then
   cd ~/.Qdotfiles
   git pull origin $DESTINATION
+elif [ "$COMMAND" = "BOOTSTRAP" ]; then
+  bash ~/.Qdotfiles/scripts/utils/backup_qdot_to_local.sh
 elif [ "$COMMAND" = "BACKUP" ]; then
-  source ~/.Qdotfiles/scripts/utils/backup_local.zsh
-  backup_local
+  bash ~/.Qdotfiles/scripts/utils/backup_local_to_qdot.sh
 elif [ "$COMMAND" = "STATUS" ]; then
   cd ~/.Qdotfiles
   git status
