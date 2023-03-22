@@ -37,7 +37,7 @@ proxy status
 
 ```
 
-### ZSH install and use oh-my-zsh
+### 🍺ZSH install and use oh-my-zsh
 
 * install zsh and oh-my-zsh
 * copy .zshrc to home
@@ -62,7 +62,7 @@ We have a command named `qdot` or `q` to premote things to be done instantly, yo
 q b # qdot bootstrap
 ```
 
-🍺Make changes, and commit to your repository
+### 🍺Make changes, and commit to your repository
 
 ```bash
 qdot backup # copy your dotfiles to the Reponsitory
