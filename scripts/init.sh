@@ -1,86 +1,60 @@
-#!/bin/bash
 
-# 交互式模式的初始化脚本
-# 防止被加载两次
-if [ -z "$_INIT_SH_LOADED" ]; then
-  _INIT_SH_LOADED=1
-else
-  return
-fi
 
-# 如果是非交互式则退出，比如 bash test.sh 这种调用 bash 运行脚本时就不是交互式
-# 只有直接敲 bash 进入的等待用户输入命令的那种模式才成为交互式，才往下初始化
-case "$-" in
-*i*) ;;
-*) return ;;
-esac
+function source_()
+{
+  source ~/.Qdotfiles/scripts/utils/source_if_exists.zsh
 
-source_if_exists() {
-  file="$1"
+  export PATH=$PATH:~/.Qdotfiles/bin
+  QDOTFILES="~/.Qdotfiles"
+  source_if_exists ~/.Qdotfiles/clash/proxy.zsh
+  source_if_exists ~/.Qdotfiles/zsh/.zsh_profile
+  source_if_exists ~/.Qdotfiles/conda/conda.zsh
+  source_if_exists ~/.Qdotfiles/docker/docker.zsh
+  source_if_exists ~/.Qdotfiles/tmux/tmux.zsh
+  source_if_exists ~/.Qdotfiles/host/hosts.zsh
+  # ros
+  source_if_exists /opt/ros/melodic/setup.zsh
+  source_if_exists /opt/ros/noetic/setup.zsh
+  source_if_exists /opt/ros/foxy/setup.zsh
 
-  if [ -f "$file" ]; then
-    source "$file"
+}
+
+function _delete_redundant_path()
+{
+  # 整理 PATH，删除重复路径
+  if [ -n "$PATH" ]; then
+    old_PATH=$PATH:
+    PATH=
+    while [ -n "$old_PATH" ]; do
+      x=${old_PATH%%:*}
+      case $PATH: in
+      *:"$x":*) ;;
+      *) PATH=$PATH:$x ;;
+      esac
+      old_PATH=${old_PATH#*:}
+    done
+    PATH=${PATH#:}
+    unset old_PATH x
   fi
 }
 
+function export_()
+{
+  export CUDA_HOME=/usr/local/cuda
+  export PATH=$PATH:$CUDA_HOME/bin
+  export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
-export PATH=$PATH:~/.Qdotfiles/bin
-QDOTFILES="~/.Qdotfiles"
+  # WSL rviz
+  export LIBGL_ALWAYS_INDIRECT=0 
+  _delete_redundant_path
+  export PATH
+}
 
-# proxy
-source ~/.Qdotfiles/clash/proxy.zsh
+function main()
+{
+  source_
+  export_
+}
 
-# zsh
-source_if_exists ~/.Qdotfiles/zsh/.zsh_profile
+main
 
-# conda
-source ~/.Qdotfiles/conda/conda.zsh
-
-# docker
-source ~/.Qdotfiles/docker/docker.zsh
-
-# tmux
-source ~/.Qdotfiles/tmux/tmux.zsh
-
-# hosts
-source ~/.Qdotfiles/host/hosts.zsh
-
-
-# ros1
-if [ -f "/opt/ros/melodic/setup.zsh" ]; then
-    source /opt/ros/melodic/setup.zsh
-fi
-
-if [ -f "/opt/ros/noetic/setup.zsh" ]; then
-    source /opt/ros/noetic/setup.zsh
-fi
-
-# ros2
-if [ -f "/opt/ros/foxy/setup.zsh" ]; then
-    source /opt/ros/foxy/setup.zsh
-fi
-
-export CUDA_HOME=/usr/local/cuda
-export PATH=$PATH:$CUDA_HOME/bin
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-
-# WSL rviz
-export LIBGL_ALWAYS_INDIRECT=0 
-
-# 整理 PATH，删除重复路径
-if [ -n "$PATH" ]; then
-  old_PATH=$PATH:
-  PATH=
-  while [ -n "$old_PATH" ]; do
-    x=${old_PATH%%:*}
-    case $PATH: in
-    *:"$x":*) ;;
-    *) PATH=$PATH:$x ;;
-    esac
-    old_PATH=${old_PATH#*:}
-  done
-  PATH=${PATH#:}
-  unset old_PATH x
-fi
-
-export PATH
