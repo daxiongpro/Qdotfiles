@@ -6,7 +6,7 @@ backup_qdot_to_local()
   # if [ `grep -c "ustc" /etc/apt/sources.list` -ne '0' ]; then # if do not exist ustc sources
   #   sudo cp apt/sources_zhongkeda.list /etc/apt
   # fi
-  root_dir=$(realpath $(pwd)/../../)
+  root_dir=~/.Qdotfiles
   echo "root_dir:${root_dir}"
   cp_file_if_exists ${root_dir}/zsh/.zshrc ~
   cp_file_if_exists ${root_dir}/zsh/.zsh_profile ~
