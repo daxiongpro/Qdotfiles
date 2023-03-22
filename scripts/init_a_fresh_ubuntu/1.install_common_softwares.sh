@@ -16,7 +16,7 @@ main() {
   elif [ "$1" = "--zsh" ]; then
     zsh_install
   elif [ "$1" = "-c" ]; then
-    softwares="git vim rdesktop ranger curl tree make snapd docker docker.io docker-compose"
+    softwares="git vim rdesktop ranger curl tree make snapd docker docker.io docker-compose autojump"
     echo "Hi handsome user! I will install some very common softwares you may need such as $softwares"
     sudo apt install -y $softwares
     bash ../../tmux/install.sh
