@@ -1,3 +1,27 @@
+source_oh_my_zsh()
+{
+    if [ -d $HOME/.oh-my-zsh ];then
+      export ZSH=$HOME/.oh-my-zsh
+      plugins=(
+        git
+        zsh-autosuggestions
+        zsh-syntax-highlighting
+        autojump
+      )
+      ZSH_THEME="robbyrussell"
+      source $ZSH/oh-my-zsh.sh
+    fi
+}
+
+source_oh_my_zsh_only_once()
+{
+  if [ ! -v IS_USING_OH_MY_ZSH ]; then
+    # 多次 source 会变卡，设置环境变量 IS_USING_OH_MY_ZSH，避免重复 source
+    echo "source oh_my_zsh."
+    source_oh_my_zsh
+    export IS_USING_OH_MY_ZSH=true
+  fi
+}
 
 _delete_redundant_path()
 {
@@ -18,7 +42,7 @@ _delete_redundant_path()
   fi
 }
 
-source_()
+source_zsh()
 {
   source ~/.Qdotfiles/scripts/utils/source_if_exists.zsh
 
@@ -35,7 +59,7 @@ source_()
 
 }
 
-export_()
+export_var()
 {
   export PATH=$PATH:~/.Qdotfiles/bin
   export CUDA_HOME=/usr/local/cuda
@@ -51,7 +75,7 @@ export_()
   export PATH
 }
 
-common_aliases () {
+make_common_aliases () {
     alias ei="vim ~/.Qdotfiles/scripts/init.sh"
     alias q="qdot"
     alias sb="source ~/.zshrc"
@@ -62,16 +86,17 @@ common_aliases () {
     alias wn="watch -n 1 nvidia-smi"
     alias cinit="cd ~/.Qdotfiles/scripts/init_a_fresh_ubuntu"
     alias nrst="sudo /etc/init.d/networking restart" # network restart 修改host后生效
-    alias dsq="docker start qdot1804nvidia"
-    alias deq="docker exec -it qdot1804nvidia /bin/zsh"
+    # alias dsq="docker start qdot1804nvidia"
+    # alias deq="docker exec -it qdot1804nvidia /bin/zsh"
     alias pycharm="sh /opt/pycharm-2022.2/bin/pycharm.sh"
 }
 
 main()
 {
-  source_
-  export_
-  common_aliases
+  export_var
+  source_zsh
+  make_common_aliases
+  source_oh_my_zsh_only_once
 }
 
 main
