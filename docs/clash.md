@@ -1,32 +1,27 @@
-### 选择节点的网站：
-
-http://clash.razord.top/#/proxies
-
 ### Install:
 
-* make sure clash config exist.
-  `qdot b`
-* download config file
+* source proxy.zsh
 
-  ```bash
-  cd ~/clash
-  wget xxx.yaml # your clash config file. go to clash website to buy it.
-  ```
-* use tmux:
+```bash
+# under bash shell
+source ~/.Qdotfiles/clash/proxy.zsh
+```
 
-  ```
-  tmux new -s proxy
-  proxy up
-  ```
-* port is 8999
+* download clash and proxy up
 
+```bash
+  # under bash shell  
+  proxy download
+```
 
-### Proxy utilities in Qdotfiles
-* `proxy [on|off|up|status]`
+port is 8999
 
-  ```
-  ➜  ~ proxy on
-  ➜  ~ proxy status
+* Open a new shell terminal, set `http_proxy` and `https_proxy` 
+
+```bash
+  # under bash shell  
+  ➜  ~ proxy on  # set http_proxy and https_proxy
+  ➜  ~ proxy status  # watch proxy status
   --------------
   Proxy setting
   --------------
@@ -39,8 +34,11 @@ http://clash.razord.top/#/proxies
   --------------
   [0.00 s] baidu :200 OK✅
   [1.00 s] google:200 OK✅
-  ➜  ~
-  ➜  ~
+```
+
+* If you want to turn off `http_proxy` and `https_proxy`
+
+```bash
   ➜  ~ proxy off
   ➜  ~ proxy status
   --------------
@@ -55,8 +53,11 @@ http://clash.razord.top/#/proxies
   --------------
   [1.00 s] baidu :200 OK✅
   [3.00 s] google:None�
-  ➜  ~
-  ```
+```
+
+* The website to choose node：
+
+`http://clash.razord.top/#/proxies`
 
 ### References：
 

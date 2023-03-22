@@ -10,11 +10,6 @@
 	</p>
 </div>
 
-### 🚀Init a fresh Ubuntu
-
-* If you have just install the Ubuntu operating system, just follow [init fresh ubuntu tutorial](docs/init_fresh_ubuntu.md) to install softwares like `git,zsh,tmux` et al.
-* All scripts about init new ubuntu OS is in `Qdotfiles/scripts/init_a_fresh_ubuntu/{{ 1-6 }}`.
-
 ### ☕Getting started
 
 * See [github usage without proxy](docs/github.md)
@@ -24,20 +19,14 @@
 git clone https://github.com/daxiongpro/Qdotfiles.git ~/.Qdotfiles
 ```
 
-* This repository is based on zsh and oh-my-zsh, please make sure you have installed it firstly.
+### 🎧Proxy useage
 
-```bash
-cd .Qdotfiles
-bash zsh/install.sh
-```
+Make a proxy on 8999 port in your linux computer. I recommand use clash. See [clash tutorial](docs/clash.md)
 
-* Do some preparations:
+### 🚀Init a fresh Ubuntu
 
-```bash
-bash ~/.Qdotfiles/scripts/bootstrap.sh
-```
-
-Now, you can just use Qdotfiles!!!
+* If you have just install the Ubuntu operating system, just follow [init fresh ubuntu tutorial](docs/init_fresh_ubuntu.md) to install softwares like `git,zsh,tmux` et al.
+* All scripts about init new ubuntu OS is in `Qdotfiles/scripts/init_a_fresh_ubuntu/{{ 1-6 }}`.
 
 ### 🍺Make changes, and commit to your repository
 
@@ -45,10 +34,6 @@ Now, you can just use Qdotfiles!!!
 qdot backup # copy your dotfiles to the Reponsitory
 qdot push -m "changes" -t [master|dev|HEAD]
 ```
-
-### 🎧Proxy useage
-
-Make a proxy on 8999 port in your linux computer. I recommand use clash. See [clash tutorial](docs/clash.md)
 
 ### 🎃Repo structure
 
