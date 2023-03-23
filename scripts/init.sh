@@ -15,11 +15,13 @@ source_oh_my_zsh()
 
 source_oh_my_zsh_only_once()
 {
-  if [ ! -v IS_USING_OH_MY_ZSH ]; then
-    # 多次 source 会变卡，设置环境变量 IS_USING_OH_MY_ZSH，避免重复 source
+  if [ ! -v IS_SOURCESED_OH_MY_ZSH ] || ([ -v IS_SOURCESED_OH_MY_ZSH ] && [ "$IS_SOURCESED_OH_MY_ZSH" = "false" ]); then
+    # 多次 source 会变卡，设置环境变量 IS_SOURCESED_OH_MY_ZSH source
     echo "source oh_my_zsh."
     source_oh_my_zsh
-    export IS_USING_OH_MY_ZSH=true
+    export IS_SOURCESED_OH_MY_ZSH="true"
+  else
+    echo "Already sourced oh-my-zsh!, IS_SOURCESED_OH_MY_ZSH=$IS_SOURCESED_OH_MY_ZSH."
   fi
 }
 
@@ -82,6 +84,8 @@ make_common_aliases () {
     alias eb="vim ~/.zshrc"
     alias cz="cd ~/.Qdotfiles/zsh/"
     alias cq="cd ~/.Qdotfiles/"
+    alias so="source_oh_my_zsh"
+    
     alias start="nautilus"
     alias wn="watch -n 1 nvidia-smi"
     alias cinit="cd ~/.Qdotfiles/scripts/init_a_fresh_ubuntu"
