@@ -44,8 +44,14 @@ main() {
     # miniconda
     bash ~/.Qdotfiles/conda/install.sh
   elif [ "$1" = "--vscode" ]; then
-    # vscode
-    sudo snap install code --classic
+    # vscode 
+    # reference: https://blog.csdn.net/sunzhao1000/article/details/120904566
+    sudo apt update
+    sudo apt install software-properties-common apt-transport-https wget
+    wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+    sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+    sudo apt update
+    sudo apt install code
   elif [ "$1" = "--wechat" ]; then
     # wechat
     sudo snap install electronic-wechat
