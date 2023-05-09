@@ -90,6 +90,7 @@ make_common_aliases () {
     alias wn="watch -n 1 nvidia-smi"
     alias cinit="cd ~/.Qdotfiles/scripts/init_a_fresh_ubuntu"
     alias nrst="sudo /etc/init.d/networking restart" # network restart 修改host后生效
+    alias count="ls -1 . | wc -l" # 统计当前文件夹下文件个数
     # alias dsq="docker start qdot1804nvidia"
     # alias deq="docker exec -it qdot1804nvidia /bin/zsh"
     alias pycharm="sh /opt/pycharm-2022.2/bin/pycharm.sh"
