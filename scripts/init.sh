@@ -94,6 +94,10 @@ make_common_aliases () {
     # alias dsq="docker start qdot1804nvidia"
     # alias deq="docker exec -it qdot1804nvidia /bin/zsh"
     alias pycharm="sh /opt/pycharm-2022.2/bin/pycharm.sh"
+    alias fnums="ls -l | grep \"^-\" | wc -l" # file nums 统计文件夹下文件数量
+    alias dnums="ls -l | grep \"^d\" | wc -l"
+    alias dfnums="ls -l | grep -E \"^-|^d\" | wc -l"
+
 }
 
 main()
