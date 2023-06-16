@@ -97,6 +97,7 @@ make_common_aliases () {
     alias fnums="ls -l | grep \"^-\" | wc -l" # file nums 统计文件夹下文件数量
     alias dnums="ls -l | grep \"^d\" | wc -l"
     alias dfnums="ls -l | grep -E \"^-|^d\" | wc -l"
+    alias rcp="rsync -av --progress" # 拷贝的时候显示进度
 
 }
 
