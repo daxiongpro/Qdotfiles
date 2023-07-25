@@ -54,6 +54,7 @@ source_zsh()
   source_if_exists ~/.Qdotfiles/docker/docker.zsh
   source_if_exists ~/.Qdotfiles/tmux/tmux.zsh
   source_if_exists ~/.Qdotfiles/host/hosts.zsh
+  source_if_exists ~/.Qdotfiles/scripts/utils/qtool.zsh
   # ros
   source_if_exists /opt/ros/melodic/setup.zsh
   source_if_exists /opt/ros/noetic/setup.zsh

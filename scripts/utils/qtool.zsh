@@ -17,4 +17,7 @@ hserver(){
 	python -m http.server $port --bind ${ip}
 }
 
-
+fp(){
+  # find port, 查看端口占用情况 
+  sudo lsof -i :"$1"
+}
