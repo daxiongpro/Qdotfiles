@@ -99,6 +99,7 @@ make_common_aliases () {
     alias dnums="ls -l | grep \"^d\" | wc -l"
     alias dfnums="ls -l | grep -E \"^-|^d\" | wc -l"
     alias rcp="rsync -av --progress" # 拷贝的时候显示进度
+    alias kill="sudo kill -9"
 
 }
 
