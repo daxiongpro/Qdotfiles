@@ -51,6 +51,7 @@ source_zsh()
   QDOTFILES="~/.Qdotfiles"
   source_if_exists ~/.Qdotfiles/clash/proxy.zsh
   source_if_exists ~/.Qdotfiles/conda/conda.zsh
+  source_if_exists ~/.Qdotfiles/conda/miniforge.zsh
   source_if_exists ~/.Qdotfiles/docker/docker.zsh
   source_if_exists ~/.Qdotfiles/tmux/tmux.zsh
   source_if_exists ~/.Qdotfiles/host/hosts.zsh
